@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 0;
+      background-color: green;
+      position: absolute;
+      left: 50% ;
+      top: 50%;
+     transform-origin: top left;
+      transform: rotate(-90deg);
+    }
+    div.on {
+      width: 300px;
+      height: 200px;
+      transition: all 2s linear;
+    }
+  </style>
+</head>
+<body>
+<button>点击</button>
+  <div ></div>
+</body>
+</html>
+<script>
+    var btn = document.querySelector("button")
+    console.log(btn);
+    btn.onclick = function(){
+      document.querySelector("div").className = "on";
+    }
+</script>
