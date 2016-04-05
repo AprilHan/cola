@@ -89,6 +89,22 @@
 
           </div>
         </div>
+        <!-- 第六屏幕 -->
+        <div class="section">
+            <div class="icon33 item33"></div>
+            <div class="icon34 item34"></div>
+            <div class="icon35 item35"></div>
+        </div>
+        <!-- 第七屏幕 -->
+        <div class="section">
+            <div class="icon36 item36">
+              <a href="javascript:;"></a>
+            </div>
+            <div class="icon37 item37"></div>
+            <div class="icon38 item38"></div>
+            <div class="icon39 item39" id="res"></div>
+            <div class="icon40 item40"></div>
+        </div>
     </div>
 
     </body>
@@ -107,13 +123,16 @@
 
                }else{
                       $(".section").eq(index-1).addClass("on");
-
-
                }
             }
         })
     })
 
-
+      var re = document.getElementById("res");
+      re.onclick = function(){
+          window.location.reload();
+      }
     </script>
 </html>
+
+<script src=""></script>
