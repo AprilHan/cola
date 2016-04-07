@@ -1,8 +1,8 @@
 /*
 * @Author: mm
 * @Date:   2016-03-24 21:59:45
-* @Last Modified by:   mm
-* @Last Modified time: 2016-03-24 22:14:20
+* @Last Modified by:   AprilHan
+* @Last Modified time: 2016-04-07 17:29:48
 */
 *,
 ::before,
@@ -35,9 +35,9 @@ textarea {
   /*针对 ios 浏览器 清除默认样式*/
   -webkit-appearance: none;
 }
-img {
+/*img {
   vertical-align: middle;
-}
+}*/
 /*清除浮动*/
 .clearfix::before,
 .clearfix::after {

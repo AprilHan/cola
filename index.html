@@ -9,7 +9,39 @@
         <link rel="stylesheet" href="css/commen.css">
         <link rel="stylesheet" href="css/index.css">
     </head>
+    <script>
+      document.onreadystatechange = function(){
+          if(document.readyState=="complete")
+          {
+             console.log("加载完成");
+             document.querySelector("#preloader").style.display = "none";
+             document.querySelector(".section").classList.add("on");
+          }
+        }
+    </script>
     <body>
+    <div id="preloader" class="preloader" >
+      <div class="spinner">
+        <div class="spinner-container container1">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+        </div>
+    </div>
     <!-- 下拉的按钮 -->
     <div class="pullDown"></div>
     <div class="sound red"></div>
@@ -110,29 +142,27 @@
     </body>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/index.js"></script>
     <script>
 
     $(function(){
         $("#fullpage").fullpage({
             afterLoad:function(anchorLink, index,direction){
-               console.log(index);
-               if(index==1){
-                setTimeout(function(){
-                     $(".section").eq(index-1).addClass("on");
-                }, 300);
-
-               }else{
+              window.index = index;
+                    if(index> 1){
                       $(".section").eq(index-1).addClass("on");
-               }
+                    }
+
             }
         })
     })
-
       var re = document.getElementById("res");
       re.onclick = function(){
           window.location.reload();
       }
+
+
     </script>
 </html>
 
-<script src=""></script>
+
